@@ -1,0 +1,158 @@
+html {
+    scroll-behavior: smooth;
+  }
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: serif;
+    line-height: 2;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: khaki; 
+    overflow: hidden;
+}
+#one{ 
+    position: fixed;
+    top: 0px; 
+    width: 21%;
+    height: 100vh;
+    background-color: lightblue;
+    margin-left: 5%;        	
+    text-align: center;
+    box-shadow: 0 0 5px 3px black;
+    overflow: hidden;
+    transition: width 0.3s linear;
+}
+#two{
+    position: absolute;
+    left: 28%;
+    width: 60%;  
+    padding-left:6%;
+    text-align: justify; 
+    transition: left 0.5s , width 0.5s linear;
+}
+#one,#two{
+    display: inline-block;
+}
+#showButton{
+    position: fixed;
+    top: 0px;
+    left: 5%;
+    display: none;
+    overflow: hidden;
+}
+#showButton i{
+    text-shadow:5px orange;
+}
+#hideButton{
+    position: absolute;
+    top: 0px;
+    right: 5%;
+    display: none;
+}
+#dp_Container{
+    margin-top: 25%;
+}
+ul{
+    list-style-type: none;
+    padding: 10%;
+    font-size: 1.1em;
+}
+li{
+    margin-top: 5%;
+}
+li:hover{
+    font-size: 1.2em;
+    cursor:pointer;
+    text-decoration: underline blue;
+    color: blue;
+}
+a{
+    text-decoration: none;
+}
+a:active{
+    color: white;
+}
+h1{
+    white-space: nowrap;
+}
+section:not(#about){
+    font-size: 1.2em;
+    margin-top: 10%;
+}
+#about{
+    font-size: 1.2em;
+    margin-top: 5%;
+}
+#name{
+    font-size: 2em;
+}
+.heading{
+    font-family:cursive;
+}
+.skill{
+    font-size: 1.1em;
+    background-color: orange;
+    margin: 5px;
+}
+.projects{
+    font-size: 1.1em;
+    background-color: orange;
+    margin: 5px;
+}
+.edu{
+    font-size: 1.1em;
+    background-color: orange;
+    margin: 5px;
+}
+img.contact{
+    height: 100px;
+    width: 100px;
+}
+#Contact div{
+    font-family: serif;
+    font-size: 1.1em;
+}
+div.contact{
+    margin-bottom: 2%;
+    padding: 2%;
+    background-color: orange;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+a.contact{
+    color: black;
+    display: block;
+    height: fit-content;
+}
+i:hover{
+    color: white;
+    cursor: pointer;
+}
+.footer{
+    text-align: center;
+}
+@media  screen and (max-width:715px) {
+    #one{
+        width: 0px;
+        margin-left:0px;
+    }
+    #two{
+        width: 90%;
+        left: 0px;
+    }
+    #showButton{
+        display: block;
+    }
+}
+@media screen and (max-width:383px) {
+    #name{
+        font-size: 1.6em;
+    }  
+}
+
