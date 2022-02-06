@@ -1,9 +1,10 @@
-two=document.getElementById('two');
-one=document.getElementById('one');
-container= document.getElementsByClassName('container');
+"use strict"
+const two=document.getElementById('two');
+const one=document.getElementById('one');
+const container= document.getElementsByClassName('container');
 container[0].style.height=two.getBoundingClientRect().height + 'px';
-showButton=document.getElementById('showButton');
-hideButton=document.getElementById('hideButton');
+const showButton=document.getElementById('showButton');
+const hideButton=document.getElementById('hideButton');
 function displayOne()
 {
     two.style.position='absolute';
