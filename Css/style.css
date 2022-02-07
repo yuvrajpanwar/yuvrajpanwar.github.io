@@ -1,6 +1,12 @@
 html {
     scroll-behavior: smooth;
   }
+.bgimg{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.8;
+}
 *{
     margin: 0px;
     padding: 0px;
@@ -12,7 +18,7 @@ html {
     width: 100%;
     height: 100vh;
     position: relative;
-    background-color: khaki; 
+    /* background-color: khaki;  */
     overflow: hidden;
 }
 #one{ 
@@ -20,7 +26,9 @@ html {
     top: 0px; 
     width: 21%;
     height: 100vh;
-    background-color: lightblue;
+    /* background-color: lightblue; */
+    /* background-color: orange; */
+    background-color: orange;
     margin-left: 5%;        	
     text-align: center;
     box-shadow: 0 0 5px 3px black;
@@ -44,9 +52,6 @@ html {
     left: 5%;
     display: none;
     overflow: hidden;
-}
-#showButton i{
-    text-shadow:5px orange;
 }
 #hideButton{
     position: absolute;
@@ -91,23 +96,38 @@ section:not(#about){
 #name{
     font-size: 2em;
 }
-.heading{
-    font-family:cursive;
+.heading,#name{
+    font-family: 'Reem Kufi';
+    text-shadow: 0px 0px 3px white;
+}
+.about{
+    background-color: orange;
+    margin: 10px;
+    padding: 20px;
 }
 .skill{
     font-size: 1.1em;
     background-color: orange;
     margin: 5px;
 }
+.skill:nth-last-child(1){
+    margin-bottom: 10px;
+}
 .projects{
     font-size: 1.1em;
     background-color: orange;
     margin: 5px;
 }
+.projects:nth-last-child(1){
+    margin-bottom: 10px;
+}
 .edu{
     font-size: 1.1em;
     background-color: orange;
     margin: 5px;
+}
+.edu:nth-last-child(1){
+    margin-bottom: 10px;
 }
 img.contact{
     height: 100px;
@@ -116,6 +136,9 @@ img.contact{
 #Contact div{
     font-family: serif;
     font-size: 1.1em;
+}
+.contact-para{
+    background-color: orange;
 }
 div.contact{
     margin-bottom: 2%;
@@ -135,7 +158,9 @@ i:hover{
     cursor: pointer;
 }
 .footer{
-    text-align: center;
+    text-align: center;  
+    font-size: 1em !important;
+    margin: 10px;
 }
 @media  screen and (max-width:715px) {
     #one{
@@ -150,9 +175,14 @@ i:hover{
         display: block;
     }
 }
-@media screen and (max-width:383px) {
+@media screen and (max-width:400px) {
     #name{
-        font-size: 1.6em;
+        font-size: 1.4em;
     }  
+}
+@media  screen and (max-width:367px) {
+   .about{
+       font-size: 1em;
+   }
 }
 
