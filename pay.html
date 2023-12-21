@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>AJAX Request Example</title>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <form id="razorpayForm">
+            <div class="form-group">
+                <label for="amountInput">Amount:</label>
+                <input type="text" class="form-control" id="amountInput" placeholder="Enter amount" value="500" />
+            </div>
+            <button type="button" class="btn btn-primary" onclick="sendRazorpayRequest()">
+                Submit
+            </button>
+        </form>
+    </div>
+
+    <!-- Include jQuery from CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+
+    <script>
+        function sendRazorpayRequest() {
+
+            var url = 'https://api.razorpay.com/v1/orders';
+            var username = 'rzp_test_f8C1BtZx3X1kDp';
+            var password = '130xmTwTatyiu5KbAFGCmb1b';
+
+            var data = {
+                "amount": 500,
+                "currency": "INR",
+                "receipt": "qwsaq1"
+            };
+
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', url, true);
+
+            // Set up the HTTP request headers
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.setRequestHeader('Authorization', 'Basic ' + btoa(username + ':' + password));
+
+            // Set up the callback function
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+                    if (xhr.status == 200) {
+                        // Handle the successful response here
+                        console.log(xhr.responseText);
+                    } else {
+                        // Handle errors or other status codes here
+                        console.error(xhr.statusText);
+                    }
+                }
+            };
+
+            // Convert the data object to a JSON string
+            var jsonData = JSON.stringify(data);
+
+            // Send the request with the JSON data
+            xhr.send(jsonData);
+
+        }
+    </script>
+</body>
+
+</html>
