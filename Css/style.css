@@ -116,6 +116,8 @@ section:not(#about){
     font-size: 1.1em;
     background-color: orange;
     margin: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 .skill:nth-last-child(1){
     margin-bottom: 10px;
@@ -124,6 +126,8 @@ section:not(#about){
     font-size: 1.1em;
     background-color: orange;
     margin: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 .projects:nth-last-child(1){
     margin-bottom: 10px;
@@ -132,6 +136,8 @@ section:not(#about){
     font-size: 1.1em;
     background-color: orange;
     margin: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 .edu:nth-last-child(1){
     margin-bottom: 10px;
@@ -146,6 +152,9 @@ img.contact{
 }
 .contact-para{
     background-color: orange;
+    padding-left: 5px;
+    padding-right: 5px;
+
 }
 div.contact{
     margin-bottom: 2%;
